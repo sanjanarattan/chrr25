@@ -1,8 +1,21 @@
 @font-face {
-  font-family: bold;
-  src: url('./font/CerebriSansPro-Bold.ttf');
+  font-family: Light;
+  src: url('./font/CerebriSansPro-Light.ttf');
 }
 
-div {
-  font-family: bold;
+@font-face {
+  font-family: Bold;
+  src: url('./font/CerebriSansPro-SemiBold.ttf');
+}
+
+h2 {
+  font-family: Bold;
+}
+
+h4 {
+  font-family: Bold;
+}
+
+p{
+    font-family: Light !important;
 }
