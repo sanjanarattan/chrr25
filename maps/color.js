@@ -1,9 +1,9 @@
 function color(values, map, svg){
 
-    const colorScale = d3.scaleQuantize()
+    const colorScale = d3.scaleSequential()
         .domain(d3.extent(values))
-        .range(d3.schemeBlues[9])
-    
+        .interpolator(d3.interpolateBuPu);
+        
     svg.selectAll("path")
         .filter(d => d && d.id)
         .attr("fill", d => {
@@ -34,7 +34,7 @@ function colorCounties(property) {
     const county_svg = d3.select("#countiesmap");
     const data = getData()[0];
 
-    const county_data = data.filter(d => d['County FIPS Code'] !== '000');
+    const county_data = data.filter(d => d['County FIPS Code'] !== '000');  
     const values = county_data.map(d => +d[property]);
 
     const countyMap = new Map();
