@@ -1,5 +1,7 @@
 var mapJson
 var countiesJson
+var DATA
+var FILTERED
 
 let margin = { top: 0, right: 50, bottom: 10, left: 50 },
     width = 900 - margin.left - margin.right,
@@ -74,7 +76,23 @@ function drawStates() {
 
 }
 
-async function loadJson(){
+function getData(){
+    return DATA
+}
+
+async function loadData(){
+    Promise.all([
+        d3.csv("../data/analytic_data2025.csv"),
+    ]).then(function(data) {
+        DATA = data        
+        console.log(DATA)
+    }).catch(function(err) {
+        console.log(err)
+    });
+
+}
+
+async function loadPath(){
     const res = await fetch(`https://cdn.jsdelivr.net/npm/us-atlas@3/states-albers-10m.json`)
     const res2 = await fetch(`https://cdn.jsdelivr.net/npm/us-atlas@3.0.1/counties-albers-10m.json`)
     mapJson = await res.json()
@@ -82,4 +100,5 @@ async function loadJson(){
     drawStates()
 }
 
-loadJson()
+loadData()
+loadPath()
