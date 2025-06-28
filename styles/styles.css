@@ -1,0 +1,8 @@
+@font-face {
+  font-family: bold;
+  src: url('./font/CerebriSansPro-Bold.ttf');
+}
+
+div {
+  font-family: bold;
+}
