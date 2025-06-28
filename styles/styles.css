@@ -19,3 +19,14 @@ h4 {
 p{
     font-family: Light !important;
 }
+
+#filterSelect{
+    font-family: Light !important;
+
+}
+
+#map{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
