@@ -73,3 +73,15 @@ p{
     padding: 9px 6px;;
 
 }
+
+option.PHWLL {
+    color: lightgreen;
+}
+
+option.PHWQL {
+    color: green;
+}
+
+option.CCHI {
+    color: lightblue;
+}
