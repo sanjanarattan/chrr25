@@ -34,9 +34,6 @@ function color(values, map, svg){
         })
         .on("mouseout", function () {
             tooltip.transition()
-                .duration(200)
-                .style("left", (mx + 100000000) + "px")
-                .style("top", (my + 1000000000) + "px")
                 .style("opacity", 0);
         });
 
