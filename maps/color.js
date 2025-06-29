@@ -2,17 +2,37 @@ function color(values, map, svg){
 
     const colorScale = d3.scaleSequential()
         .domain(d3.extent(values))
-        .interpolator(d3.interpolateBuPu);
-        
-    svg.selectAll("path")
+        .interpolator(d3.interpolateBuPu)
+
+    svg
+        .selectAll("path")
+        .attr("id", "tooltip")
         .filter(d => d && d.id)
         .attr("fill", d => {
             const value = map.get(d.id);
             return value !== undefined ? colorScale(value) : "#fff"
         })
 
-}
+    var legendScale = d3.scaleSequential(d3.interpolateBuPu)
+        .domain(d3.extent(values));
 
+    svg
+        .append("g")
+        .attr("class", "legend")
+        .attr("transform", "translate(750,20)")
+    
+    var legend = d3.legendColor()
+        .shapeWidth(15)
+        .cells(5)
+        .orient("vertical")
+        .scale(legendScale)
+
+    svg
+        .select(".legend")
+	  	.call(legend)
+    
+}
+    
 function colorStates(property) {
     const state_svg = d3.select("#statemap")
     data = getData()[0]
@@ -34,13 +54,13 @@ function colorCounties(property) {
     const county_svg = d3.select("#countiesmap");
     const data = getData()[0];
 
-    const county_data = data.filter(d => d['County FIPS Code'] !== '000');  
-    const values = county_data.map(d => +d[property]);
+    const county_data = data.filter(d => d['County FIPS Code'] !== '000')
+    const values = county_data.map(d => +d[property])
 
     const countyMap = new Map();
     county_data.forEach(d => {
-        const fips = d['5-digit FIPS Code'].padStart(5, '0');
-        countyMap.set(fips, +d[property]);
+        const fips = d['5-digit FIPS Code'].padStart(5, '0')
+        countyMap.set(fips, +d[property])
     });
 
     color(values, countyMap, county_svg)

@@ -3,9 +3,9 @@ var countiesJson
 var DATA
 var FILTERED
 
-let margin = { top: 0, right: 50, bottom: 10, left: 50 },
-    width = 900 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+let margin = { top: 10, right: 50, bottom: 10, left: 50 },
+    width = 1000 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
 
 function drawCounties() {
@@ -85,7 +85,7 @@ async function loadData(){
         d3.csv("../data/analytic_data2025.csv"),
     ]).then(function(data) {
         DATA = data        
-        console.log(DATA)
+        // console.log(DATA)
     }).catch(function(err) {
         console.log(err)
     });
@@ -98,7 +98,10 @@ async function loadPath(){
     mapJson = await res.json()
     countiesJson = await res2.json()
     drawStates()
+
 }
 
 loadData()
 loadPath()
+
+

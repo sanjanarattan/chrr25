@@ -8,6 +8,11 @@
   src: url('./font/CerebriSansPro-SemiBold.ttf');
 }
 
+@font-face {
+  font-family: VeryLight;
+  src: url('./font/CerebriSansPro-ExtraLight.ttf');
+}
+
 h2 {
   font-family: Bold;
 }
@@ -29,4 +34,30 @@ p{
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 100px;
+}
+
+.legend{
+    font-family: VeryLight !important;
+}
+
+#filterDiv {
+    margin-top: 50px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#filterSelect{
+    border: none;
+    outline: none;
+    font-size: 1.0em;
+}
+
+#filterSelect::-ms-expand {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }

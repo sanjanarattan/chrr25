@@ -4,23 +4,26 @@
     <meta charset="UTF-8" />
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
     <link rel="stylesheet" href="../styles/styles.css">
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
-    <script defer src="/_vercel/insights/script.js"></script>
     <title>2025 Static Visualizations</title>
 </head>
 <body>
     <input type="checkbox" id="mapType">
-    <select id="filterSelect">
-        <option value=""></option>
-        <option value="Population raw value">Population</option>
-        <option value="Low Birth Weight raw value">Low Birth Weight</option>
-        <option value="Premature Death raw value">Premature Death</option>
-        <option value="Poor Physical Health Days raw value">Poor Physical Health Days</option>
-        <option value="Poor Mental Health Days raw value">Poor Mental Health Days</option>
-    </select>
+    <div id = "filterDiv">
+        <select id="filterSelect">
+            <option value=""> Select Health Measure</option>
+            <option value="Population raw value">Population</option>
+            <option value="Low Birth Weight raw value">Low Birth Weight</option>
+            <option value="Premature Death raw value">Premature Death</option>
+            <option value="Poor Physical Health Days raw value">Poor Physical Health Days</option>
+            <option value="Poor Mental Health Days raw value">Poor Mental Health Days</option>
+        </select>
+    </div>
     <div id = "map"></div>
 
 </body>
