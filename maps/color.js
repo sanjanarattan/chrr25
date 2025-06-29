@@ -23,7 +23,7 @@ function color(values, map, svg){
                 .transition()
                 .style("left", (mx + 10) + "px")
                 .style("top", (my + 10) + "px")
-                .style("opacity", 1)
+                .style("visibility", "visible")
                 .text(`${name}\n${value !== undefined ? value : "NaN"}`);
         })
         .on("mousemove", function (evt) {
@@ -34,7 +34,7 @@ function color(values, map, svg){
         })
         .on("mouseout", function () {
             tooltip.transition()
-                .style("opacity", 0);
+                .style("visibility", "hidden");
         });
 
     var legendScale = d3.scaleSequential(d3.interpolateBuPu)
