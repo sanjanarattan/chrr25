@@ -72,8 +72,6 @@ function drawStates() {
         .join('path')
         .attr('d', d3.geoPath())
         .attr("transform", "scale(0.7)")
-
-
 }
 
 function getData(){

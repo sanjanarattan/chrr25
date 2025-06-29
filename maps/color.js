@@ -4,14 +4,39 @@ function color(values, map, svg){
         .domain(d3.extent(values))
         .interpolator(d3.interpolateBuPu)
 
+    const tooltip = d3.select("#map")
+        .append("div")  
+        .attr("class", "tooltip")
+
     svg
         .selectAll("path")
-        .attr("id", "tooltip")
         .filter(d => d && d.id)
         .attr("fill", d => {
             const value = map.get(d.id);
             return value !== undefined ? colorScale(value) : "#fff"
         })
+        .on("mouseover", function (evt, d) {
+            const [mx, my] = d3.pointer(evt)
+            const value = map.get(d.id);
+            const name = d.properties?.name || "Unknown"
+            tooltip
+                .transition()
+                .style("left", (mx + 10) + "px")
+                .style("top", (my + 10) + "px")
+                .style("opacity", 1)
+                .text(`${name}\n${value !== undefined ? value : "NaN"}`);
+        })
+        .on("mousemove", function (evt) {
+            const [mx, my] = d3.pointer(evt);
+            tooltip
+                .style("left", (mx + 10) + "px")
+                .style("top", (my + 10) + "px")
+        })
+        .on("mouseout", function () {
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 0);
+        });
 
     var legendScale = d3.scaleSequential(d3.interpolateBuPu)
         .domain(d3.extent(values));
