@@ -21,18 +21,18 @@ function color(values, map, svg){
             const name = d.properties?.name || "Unknown"
             tooltip
                 .transition()
-                .style("left", (mx + 10) + "px")
-                .style("top", (my + 10) + "px")
+                .style("left", (mx + 100) + "px")
+                .style("top", (my + 100) + "px")
                 .style("visibility", "visible")
                 .text(`${name}\n${value !== undefined ? value : "NaN"}`);
         })
         .on("mousemove", function (evt) {
             const [mx, my] = d3.pointer(evt);
             tooltip
-                .style("left", (mx + 10) + "px")
-                .style("top", (my + 10) + "px")
+                .style("left", (mx + 100) + "px")
+                .style("top", (my + 100) + "px")
         })
-        .on("mouseout", function () {
+        .on("mouseout", function () {   
             tooltip.transition()
                 .style("visibility", "hidden");
         });
