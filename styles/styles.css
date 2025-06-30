@@ -21,6 +21,10 @@ h4 {
   font-family: Bold;
 }
 
+a{
+    font-family: Light !important;
+
+}
 p{
     font-family: Light !important;
 }
@@ -84,4 +88,21 @@ option.PHWQL {
 
 option.CCHI {
     color: lightblue;
+}
+
+#sunburst{
+    font-family: Bold !important;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.Learn {
+    height: 100vh;
+}   
+
+#citation{
+    font-family: Bold !important;
+    color:gray
 }

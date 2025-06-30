@@ -1,0 +1,30 @@
+Node,Focus,Measure,Description,Weight,Years_Included,Top_Performers,US_Overall
+Length of Life,Life Span,Premature Death,Years of potential life lost before age 75 per 100000 population (age-adjusted),50,2020-2022,6200,8400
+Quality of Life,Physical Health,Poor Physical Health Days,Average number of physically unhealthy days reported in past 30 days (age-adjusted),10,2022,3.6,3.9
+Quality of Life,Physical Health,Low Birth Weight,Percentage of live births with low birth weight (< 2500 grams),20,2017-2023,6%,8%
+Quality of Life,Mental Health,Poor Mental Health Days,Average Number of mentally unhealthy days reported in the past 30 days (age-adjusted),10,2022,4.9,5.1
+Quality of Life,Life satisfaction,Poor or Fair Health,Percentage of adults reporting fair or poor health (age-adjusted),10,2022,14%,17%
+Health Infrastructure,Health promotion/harm reduction,Flu Vaccinations,Percentage of fee-for-service (FFS) Medicare enrollees who had an annual flu vaccination,4,2022,54%,48%
+Health Infrastructure,Health promotion/harm reduction,Access to Exercise Opportunities,Percentage of population with adequate access to locations for physical activity,4,"2024, 2022 & 2020",91%,84%
+Health Infrastructure,Health promotion/harm reduction,Food Environment Index,Index of factors that contribute to a healthy food environment from 0 (worst) to 10 (best),4,2019 & 2022,8.8,7.4
+Health Infrastructure,Clinical care,Primary Care Physicians,Ratio of population to primary care physicians,2,2021,1030:1,1330:1
+Health Infrastructure,Clinical care,Mental Health Providers,Ratio of population to mental health providers,1,2024,220:1,300:1
+Health Infrastructure,Clinical care,Dentists,Ratio of population to dentists,1,2022,1180:1,1360:1
+Health Infrastructure,Clinical care,Preventable Hospital Stays,Rate of hospital stays for ambulatory-care sensitive conditions per 100000 Medicare enrollees,4,2022,1596,2666
+Health Infrastructure,Clinical care,Mammography Screening,Percentage of female Medicare enrollees ages 65-74 who received an annual mammography screening,1,2022,53%,44%
+Health Infrastructure,Clinical care,Uninsured,Percentage of population under age 65 without health insurance,4,2022,6%,10%
+Physical Environment,Housing & transportation,Severe Housing Problems,Percentage of households with at least 1 of 4 housing problems: overcrowding high housing costs lack of kitchen facilities or lack of plumbing facilities,4,2017-2021,8%,17%
+Physical Environment,Housing & transportation,Driving Alone to Work,Percentage of the workforce that drives alone to work,2,2019-2023,69%,70%
+Physical Environment,Housing & transportation,Long Commute - Driving Alone,Among workers who commute in their car alone the percentage that commute more than 30 minutes,1,2019-2023,17%,37%
+Physical Environment,Air/water/land,Air Pollution: Particulate Matter,Average daily density of fine particulate matter in micrograms per cubic meter (PM2.5),8,2020,5.6,7.3
+Physical Environment,Air/water/land,Drinking Water Violations,Indicator of the presence of health-related drinking water violations. 'Yes' indicates the presence of a violation 'No' indicates no violation,4,2023,,
+Physical Environment,Civic & community resources,Broadband Access,Percentage of households with broadband internet connection,4,2019-2023,92%,90%
+Physical Environment,Civic & community resources,Library Access,Library visits per person living within the library service area per year,2,2022,5,2
+Social & Economic Factors,Education,Some College,Percentage of adults ages 25-44 with some post-secondary education,8,2019-2023,74%,68%
+Social & Economic Factors,Education,High School Completion,Percentage of adults ages 25 & over with a high school diploma or equivalent,8,2019-2023,95%,89%
+Social & Economic Factors,Income employment & wealth,Unemployment,Percentage of population ages 16 & older unemployed but seeking work,8,2023,2.3%,3.6%
+Social & Economic Factors,Income employment & wealth,Income Inequality,Ratio of household income at the 80th percentile to income at the 20th percentile,8,2019-2023,3.7,4.9
+Social & Economic Factors,Income employment & wealth,Children in Poverty,Percentage of people under age 18 in poverty,8,2023 & 2019-2023,10%,16%
+Social & Economic Factors,Safety & social support,Injury Deaths,Number of deaths due to injury per 100000 population,4,2018-2022,67,84
+Social & Economic Factors,Safety & social support,Social Associations,Number of membership associations per 10000 population,2,2022,18.0,9.1
+Social & Economic Factors,Safety & social support,Child Care Cost Burden,Child care costs for a household with two children as a percent of median household income,4,2024 & 2023,20%,28%

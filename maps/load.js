@@ -44,6 +44,30 @@ function drawCounties() {
         .join("path")
         .attr("d", d3.geoPath())
         .attr("transform", "scale(0.7)");
+    
+    counties_svg
+        .append("text")
+        .attr("x", "250")
+        .attr("y", "350")
+        .style("font-size", "8px")
+        .style("fill", "gray")
+        .text("University of Wisconsin Population Health Institute.")
+
+    counties_svg
+        .append("text")
+        .attr("x", "190")
+        .attr("y", "360")
+        .style("font-size", "8px")
+        .style("fill", "gray")
+        .text("University of Wisconsin Population Health Institute Model of Health") 
+
+    counties_svg
+        .append("text")
+        .attr("x", "160")
+        .attr("y", "370")
+        .style("font-size", "8px")
+        .style("fill", "gray")
+        .text("County Health Rankings & Roadmaps 2025. www.countyhealthrankings.org.")
 }
 
 function drawStates() {
@@ -72,6 +96,33 @@ function drawStates() {
         .join('path')
         .attr('d', d3.geoPath())
         .attr("transform", "scale(0.7)")
+
+    state_svg
+        .append("text")
+        .attr("id", "citation")
+        .attr("x", "690")
+        .attr("y", "350")
+        .style("font-size", "8px")
+        .style("fill", "gray")
+        .text("University of Wisconsin Population Health Institute.")
+
+    state_svg
+        .append("text")
+        .attr("id", "citation")
+        .attr("x", "630")
+        .attr("y", "360")
+        .style("font-size", "8px")
+        .style("fill", "gray")
+        .text("University of Wisconsin Population Health Institute Model of Health") 
+        
+    state_svg
+        .append("text")
+        .attr("id", "citation")
+        .attr("x", "600")
+        .attr("y", "370")
+        .style("font-size", "8px")
+        .style("fill", "gray")
+        .text("County Health Rankings & Roadmaps 2025. www.countyhealthrankings.org.")
 }
 
 function getData(){
